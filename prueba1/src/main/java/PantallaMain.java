@@ -1,19 +1,18 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
 /**
  *
  * @author Clara
  */
-public class NewJDialog extends javax.swing.JDialog {
+public class PantallaMain extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJDialog
+     * Creates new form NewJFrame
      */
-    public NewJDialog(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public PantallaMain() {
         initComponents();
     }
 
@@ -26,14 +25,14 @@ public class NewJDialog extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jvolver = new javax.swing.JButton();
+        jButtonAbrir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jvolver.setText("volver");
-        jvolver.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAbrir.setText("Abria cuadro de diálogo");
+        jButtonAbrir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jvolverActionPerformed(evt);
+                jButtonAbrirActionPerformed(evt);
             }
         });
 
@@ -42,25 +41,25 @@ public class NewJDialog extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(jvolver)
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGap(119, 119, 119)
+                .addComponent(jButtonAbrir)
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(jvolver)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addGap(134, 134, 134)
+                .addComponent(jButtonAbrir)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jvolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jvolverActionPerformed
-        //ocultar boton
-        setVisible (false);
-    }//GEN-LAST:event_jvolverActionPerformed
+    private void jButtonAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirActionPerformed
+        PantallaDialogo dialogo = new PantallaDialogo (this, true);
+        dialogo.setVisible (true);
+    }//GEN-LAST:event_jButtonAbrirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,32 +78,26 @@ public class NewJDialog extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
-        /* Create and display the dialog */
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                NewJDialog dialog = new NewJDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new PantallaMain().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jvolver;
+    private javax.swing.JButton jButtonAbrir;
     // End of variables declaration//GEN-END:variables
 }
